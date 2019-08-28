@@ -24,7 +24,7 @@
                    #userNameVar="ngModel"
                    [ngClass]="{'is-invalid': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }" />
             <span class="invalid-feedback">
-              <span *ngIf="userNameVar.errors?.required">
+              <span *ngIf= "userNameVar.errors?.required">
                 User name is required.
               </span>
             </span>
@@ -61,7 +61,7 @@
                     [disabled]="!loginForm.valid">
               Log In
             </button>
-            <button class="btn btn-outline-secondary"
+            <button [routerLink]= "['/welcome']" class="btn btn-outline-secondary"
                     type="button"
                     style="width:80px">
               Cancel
