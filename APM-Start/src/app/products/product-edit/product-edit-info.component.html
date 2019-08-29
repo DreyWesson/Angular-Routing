@@ -17,15 +17,15 @@
                  [(ngModel)]=product.productName
                  name="productName"
                  #productNameVar="ngModel"
-                 [ngClass]="{'is-invalid': (productNameVar.touched || 
+                 [ngClass]="{'is-invalid': (productNameVar.touched ||
                                             productNameVar.dirty ||
-                                            product.id !== 0) && 
+                                            product.id !== 0) &&
                                             !productNameVar.valid }" />
           <span class="invalid-feedback">
-            <span *ngIf="productNameVar.errors?.required">
+            <span *ngIf="productNameVar?.errors.required">
               Product name is required.
             </span>
-            <span *ngIf="productNameVar.errors?.minlength">
+            <span *ngIf="productNameVar?.errors.minlength">
               Product name must be at least three characters.
             </span>
           </span>
@@ -44,12 +44,12 @@
                  [(ngModel)]=product.productCode
                  name="productCode"
                  #productCodeVar="ngModel"
-                 [ngClass]="{'is-invalid': (productCodeVar.touched || 
+                 [ngClass]="{'is-invalid': (productCodeVar.touched ||
                                             productCodeVar.dirty ||
                                             product.id !== 0) &&
                                             !productCodeVar.valid }" />
           <span class="invalid-feedback">
-            <span *ngIf="productCodeVar.errors?.required">
+            <span *ngIf="productCodeVar?.errors.required">
               Product code is required.
             </span>
           </span>

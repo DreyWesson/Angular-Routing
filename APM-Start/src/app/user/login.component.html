@@ -24,7 +24,7 @@
                    #userNameVar="ngModel"
                    [ngClass]="{'is-invalid': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }" />
             <span class="invalid-feedback">
-              <span *ngIf= "userNameVar.errors?.required">
+              <span *ngIf= "userNameVar?.errors.required">
                 User name is required.
               </span>
             </span>
@@ -46,7 +46,7 @@
                    #passwordVar="ngModel"
                    [ngClass]="{'is-invalid': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }" />
             <span class="invalid-feedback">
-              <span *ngIf="passwordVar.errors?.required">
+              <span *ngIf="passwordVar?.errors.required">
                 Password is required.
               </span>
             </span>
